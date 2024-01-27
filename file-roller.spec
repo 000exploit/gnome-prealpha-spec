@@ -1,11 +1,11 @@
 %global tarball_version %%(echo %{version} | tr '~' '.')
-%global libadwaita_version 1.4~alpha
+%global libadwaita_version 1.4
 
-%define commit 9d88d205cba2286602fcb21271d31a703b77fec0
+%define commit a92860373f9c306a8d97dd82969a1a5619589f4a
 
 Name:           file-roller
-Version:        46~prealpha
-Release:        1%{?dist}
+Version:        46~alpha
+Release:        2%{?dist}
 Summary:        Tool for viewing and creating archives
 
 License:        GPLv2+
@@ -91,6 +91,12 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/org.gnome.FileRoller.
 %endif
 
 %changelog
+* Sat Jan 27 2024 000exploit <illialoo99+rpm@gmail.com> - 46~alpha-1
+- Updated to 46.alpha
+
+* Tue Oct 10 2023 000exploit <illialoo99+rpm@gmail.com> - 46~prealpha-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
+
 * Sun Oct 1 2023 000exploit <illialoo99+rpm@gmail.com> - 46~prealpha-1
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
 

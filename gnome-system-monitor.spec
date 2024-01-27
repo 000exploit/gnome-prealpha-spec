@@ -1,12 +1,12 @@
-%global libgtop2_version 2.37.2
-%global libadwaita_version 1.4~alpha
+%global libgtop2_version 2.41.2
+%global libadwaita_version 1.4
 
 %global tarball_version %%(echo %{version} | tr '~' '.')
 
-%define commit e3f7df9944e187b77c6da39b66a81da5c7718c9e
+%define commit a9dc8feb2b3284aea69b64b6f46ef0c743989012
 
 Name:           gnome-system-monitor
-Version:        46~prealpha
+Version:        46~alpha
 Release:        1%{?dist}
 Summary:        Process and resource monitor
 
@@ -50,14 +50,14 @@ such as CPU and memory.
 %find_lang %{name} --with-gnome
 
 %check
-desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/gnome-system-monitor.desktop
+desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/org.gnome.SystemMonitor.desktop
 desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/gnome-system-monitor-kde.desktop
 
 %files -f %{name}.lang
 %license COPYING
 %doc AUTHORS NEWS README.md
 %{_bindir}/gnome-system-monitor
-%{_datadir}/applications/gnome-system-monitor.desktop
+%{_datadir}/applications/org.gnome.SystemMonitor.desktop
 %{_datadir}/applications/gnome-system-monitor-kde.desktop
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-system-monitor.enums.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-system-monitor.gschema.xml
@@ -70,6 +70,9 @@ desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/gnome-system-monit
 %{_libexecdir}/gnome-system-monitor/
 
 %changelog
+* Sat Jan 27 2024 000exploit <illialoo99+rpm@gmail.com> - 46~alpha-1
+- Update to 46.alpha
+
 * Sun Oct 1 2023 000exploit <illialoo99+rpm@gmail.com> - 46~prealpha-1
 - Update to 46.prealpha
 
